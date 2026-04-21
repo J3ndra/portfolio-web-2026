@@ -32,10 +32,10 @@ export default function Home() {
       <div className="mb-12 flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl text-zinc-900 dark:text-zinc-100">
-            Kohendru
+            Junianto Endra
           </h1>
           <p className="mt-4 text-xl text-zinc-600 dark:text-zinc-400">
-            Backend Engineer & Builder of Robust Systems
+            Junior Software Engineer & Digital Solutions Builder
           </p>
         </div>
         
@@ -75,11 +75,11 @@ export default function Home() {
           <div className="flex h-full flex-col justify-between">
             <div>
               <Terminal className="mb-4 h-8 w-8 text-indigo-500" />
-              <h2 className="text-2xl font-bold mb-4">Crafting the digital backbone</h2>
+              <h2 className="text-2xl font-bold mb-4">Bridging requirements and user needs</h2>
               <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                I specialize in building high-performance APIs, distributed systems, and scalable infrastructure. 
-                Whether it&apos;s optimizing SQL queries or architecting microservices, I love making complex backend 
-                logic feel simple and elegant.
+                Software Engineer with nearly four years of experience delivering high-impact digitalization 
+                solutions across manufacturing and HR. I pride myself on bridging the gap between complex 
+                technical requirements and actual end-user needs.
               </p>
             </div>
             <div className="mt-8 flex gap-4">
@@ -106,7 +106,7 @@ export default function Home() {
             Stack
           </h3>
           <div className="grid grid-cols-2 gap-2">
-            {['Go', 'Node.js', 'Python', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes', 'AWS'].map((tech) => (
+            {['PHP (Laravel)', 'Flutter', 'Go', 'Node.js', 'PostgreSQL', 'Linux Server', 'Nginx', 'Firebase'].map((tech) => (
               <div key={tech} className="flex items-center gap-2 rounded-lg bg-zinc-100/50 px-3 py-2 text-sm dark:bg-zinc-800/50">
                 <Zap className="h-3 w-3 text-emerald-500" />
                 {tech}
@@ -125,10 +125,16 @@ export default function Home() {
             <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
             Available for new projects
           </div>
-          <Link href="/experience" className="mt-4 group flex items-center justify-between rounded-xl bg-zinc-100 p-3 text-sm font-bold text-indigo-600 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-indigo-400 dark:hover:bg-zinc-700">
-            View Experience
-            <Zap className="h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
-          </Link>
+          <div className="mt-4 flex flex-col gap-2">
+            <Link href="/experience" className="group flex items-center justify-between rounded-xl bg-zinc-100 p-3 text-sm font-bold text-indigo-600 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-indigo-400 dark:hover:bg-zinc-700">
+              Experience
+              <Zap className="h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
+            </Link>
+            <Link href="/projects" className="group flex items-center justify-between rounded-xl bg-indigo-600 p-3 text-sm font-bold text-white transition-all hover:bg-indigo-700 shadow-lg shadow-indigo-500/20">
+              Projects
+              <Code2 className="h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
+            </Link>
+          </div>
         </BentoBox>
 
         {/* Contact Me - Wide & Repositioned */}
