@@ -4,14 +4,10 @@ import React, { useState } from 'react';
 import { 
   Mail, 
   Code2, 
-  Server, 
-  Database, 
-  Cpu, 
-  ExternalLink,
+  Terminal, 
+  Zap,
   Bomb,
-  Undo2,
-  Terminal,
-  Zap
+  Undo2
 } from 'lucide-react';
 import { 
   FaGithub, 
@@ -73,7 +69,7 @@ export default function Home() {
         {/* Hero / About - Wide */}
         <BentoBox 
           isChaosMode={isChaosMode}
-          className="md:col-span-2 md:row-span-2 bg-linear-to-br from-indigo-500/10 via-transparent to-transparent"
+          className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent"
         >
           <div className="flex h-full flex-col justify-between">
             <div>
@@ -133,91 +129,28 @@ export default function Home() {
           </p>
         </BentoBox>
 
-        {/* Featured Project - Long */}
+        {/* Contact Me - Wide & Repositioned */}
         <BentoBox 
           isChaosMode={isChaosMode}
-          className="md:col-span-2 flex flex-col justify-between"
+          className="md:col-span-2 border-indigo-500/20 bg-indigo-500/5 dark:bg-indigo-500/10"
         >
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-500">Featured Project</span>
-              <ExternalLink className="h-4 w-4 text-zinc-400" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">HyperScale Gateway</h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              A lightning-fast API gateway built with Go, processing over 100k requests per second with sub-millisecond latency.
-            </p>
-          </div>
-          <div className="mt-4 h-24 w-full rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
-            <Server className="h-8 w-8 text-indigo-500/50" />
-          </div>
-        </BentoBox>
-
-        {/* Project 2 */}
-        <BentoBox 
-          isChaosMode={isChaosMode}
-        >
-          <h3 className="font-bold mb-2 text-sm">CacheMaster</h3>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">
-            Distributed Redis caching layer with intelligent invalidation.
-          </p>
-          <div className="mt-4 flex gap-1">
-            <div className="h-1.5 flex-1 rounded-full bg-amber-500" />
-            <div className="h-1.5 flex-1 rounded-full bg-zinc-200 dark:bg-zinc-800" />
-            <div className="h-1.5 flex-1 rounded-full bg-zinc-200 dark:bg-zinc-800" />
-          </div>
-        </BentoBox>
-
-        {/* Project 3 */}
-        <BentoBox 
-          isChaosMode={isChaosMode}
-        >
-          <h3 className="font-bold mb-2 text-sm">LogStream</h3>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">
-            Real-time log processing and alerting pipeline.
-          </p>
-          <div className="mt-4 flex justify-center">
-            <Database className="h-8 w-8 text-emerald-500/30" />
-          </div>
-        </BentoBox>
-
-        {/* Contact Me - Wide */}
-        <BentoBox 
-          isChaosMode={isChaosMode}
-          className="md:col-span-4 lg:col-span-2 border-indigo-500/20 bg-indigo-500/5 dark:bg-indigo-500/10"
-        >
-          <div className="flex h-full flex-col justify-between sm:flex-row sm:items-center gap-6">
+          <div className="flex h-full flex-col gap-6">
             <div>
               <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Let&apos;s build something epic.</h3>
               <p className="mt-2 text-zinc-600 dark:text-zinc-400">
                 I&apos;m always open to discussing new systems and architecture.
               </p>
             </div>
-            <a 
-              href="mailto:hello@example.com" 
-              className="group flex items-center gap-3 rounded-2xl bg-indigo-600 px-8 py-4 font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-700 hover:shadow-indigo-500/40 active:scale-95"
-            >
-              <Mail className="h-5 w-5 transition-transform group-hover:-rotate-12" />
-              Say Hi
-            </a>
+            <div className="flex">
+              <a 
+                href="mailto:hello@example.com" 
+                className="group flex w-full items-center justify-center gap-3 rounded-2xl bg-indigo-600 px-8 py-4 font-bold text-white shadow-lg shadow-indigo-500/25 transition-all hover:bg-indigo-700 hover:shadow-indigo-500/40 active:scale-95"
+              >
+                <Mail className="h-5 w-5 transition-transform group-hover:-rotate-12" />
+                Say Hi
+              </a>
+            </div>
           </div>
-        </BentoBox>
-
-        {/* Final Small Box */}
-        <BentoBox 
-          isChaosMode={isChaosMode}
-          className="flex items-center justify-center"
-        >
-          <Cpu className="h-10 w-10 text-zinc-400 opacity-20" />
-        </BentoBox>
-
-        {/* Hiring Badge */}
-        <BentoBox 
-          isChaosMode={isChaosMode}
-          className="flex items-center justify-center overflow-hidden bg-linear-to-br from-indigo-600 to-violet-700 p-0 border-none"
-        >
-          <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#fff_25%,transparent_25%,transparent_50%,#fff_50%,#fff_75%,transparent_75%,transparent)] bg-size-[20px_20px]" />
-          <span className="relative text-3xl font-black tracking-tighter text-white uppercase italic">Hiring?</span>
         </BentoBox>
 
       </div>
