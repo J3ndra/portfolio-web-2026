@@ -26,7 +26,7 @@ export default function Spotlight() {
 
   const background = useTransform(
     [smoothX, smoothY],
-    ([x, y]) => `radial-gradient(800px circle at ${x}px ${y}px, rgba(99, 102, 241, 0.1), transparent 80%)`
+    ([x, y]) => `radial-gradient(400px circle at ${x}px ${y}px, rgba(99, 102, 241, 0.15), transparent 80%)`
   );
 
   return (
