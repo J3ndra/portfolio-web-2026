@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   Mail, 
   Code2, 
@@ -119,14 +120,15 @@ export default function Home() {
           isChaosMode={isChaosMode}
           className="lg:col-span-1"
         >
-          <h3 className="text-lg font-bold mb-2">Status</h3>
+          <h3 className="text-lg font-bold mb-2 text-zinc-900 dark:text-zinc-100">Status</h3>
           <div className="flex items-center gap-2 text-sm text-zinc-500">
             <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
             Available for new projects
           </div>
-          <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
-            Currently deep-diving into Rust and High-Frequency Trading systems.
-          </p>
+          <Link href="/experience" className="mt-4 group flex items-center justify-between rounded-xl bg-zinc-100 p-3 text-sm font-bold text-indigo-600 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-indigo-400 dark:hover:bg-zinc-700">
+            View Experience
+            <Zap className="h-4 w-4 transition-transform group-hover:scale-125 group-hover:rotate-12" />
+          </Link>
         </BentoBox>
 
         {/* Contact Me - Wide & Repositioned */}
